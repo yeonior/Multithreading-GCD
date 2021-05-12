@@ -46,7 +46,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A2z-9u-feC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A2z-9u-feC">
                                 <rect key="frame" x="0.0" y="88" width="414" height="365"/>
                                 <color key="backgroundColor" red="0.68605154739999996" green="0.62874065759999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -54,15 +54,24 @@
                                     <constraint firstAttribute="width" constant="414" id="wLr-9Z-oR5"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="nzO-2I-eE7">
+                                <rect key="frame" x="197" y="260" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uqg-nL-dFU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nzO-2I-eE7" firstAttribute="centerY" secondItem="A2z-9u-feC" secondAttribute="centerY" id="cpN-FD-YTI"/>
                             <constraint firstItem="A2z-9u-feC" firstAttribute="top" secondItem="uqg-nL-dFU" secondAttribute="top" id="gSQ-Ba-dEu"/>
+                            <constraint firstItem="nzO-2I-eE7" firstAttribute="centerX" secondItem="A2z-9u-feC" secondAttribute="centerX" id="pEV-gR-XF3"/>
                             <constraint firstItem="A2z-9u-feC" firstAttribute="centerX" secondItem="uqg-nL-dFU" secondAttribute="centerX" id="pNj-Me-FUM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MZ9-kc-StE"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="nzO-2I-eE7" id="jU7-Ft-t2r"/>
+                        <outlet property="imageView" destination="A2z-9u-feC" id="aoL-Ca-oTm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA1-9Q-6Y4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
